@@ -34,7 +34,7 @@ function DashboardLayout({
     const result = await convex.query(api.teams.getTeam, {
       email: user?.email,
     });
-
+    console.log("Result", result);
     if (!result?.length) {
       router.push("teams/create");
     }
